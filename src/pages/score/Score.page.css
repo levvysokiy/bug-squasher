@@ -1,0 +1,12 @@
+.score-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-page__score {
+  color: #ffffff;
+}

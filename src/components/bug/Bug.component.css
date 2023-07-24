@@ -1,0 +1,11 @@
+.bug {
+  position: absolute;
+  cursor: pointer;
+  transition: top 0.3s, left 0.3s;
+  z-index: 1000;
+}
+
+.bug img {
+  width: 100%;
+  height: 100%;
+}

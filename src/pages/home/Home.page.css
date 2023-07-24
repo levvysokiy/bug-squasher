@@ -1,0 +1,18 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.home-page__title {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.home-page__image {
+  width: 250px;
+  height: auto;
+}
