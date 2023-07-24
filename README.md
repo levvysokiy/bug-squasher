@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+# BUG SQUASHER
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The solution is a SPA written on React.js.
+For comfortable navigation i have created 3 routes using react-router-dom:
 
-## Available Scripts
+**'/'** - Home page. Contains a button to start a game.  
+**'/game'** - Game page. Main game logic.  
+**'/score'** - Score page. The page with results of the game.
 
-In the project directory, you can run:
+**Design patterns:**
 
-### `npm start`
+- _Provider (React Context)_ - to share data between components and avoid props drilling;
+- _Hooks_ - to move some complex logic from components to make them more simple and readable;
+- _Memoization_ - to optimize the object or function creations, decrease the number of rerenders;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Also, I used requestAnimationFrame to make bug movement animation because it helps to provide stable FPS (60 frames per second).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Trade-offs:**
 
-### `npm test`
+- _Css isolation._ Because the app is very small I neglected css isolation and used BEM methodology. For larger apps there are a lot of better decisions to avoid CSS classes collisions. For example, CSS modules.
+- _Tests._ I didn't write tests, because of lack of time, but I would add unit and e2e tests.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Additional features:**
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- _Countdown_. Timer from 5 to 0 when user pressed a start button to get ready to squash;
+- _Leaderboard._ A list of top squashers. This feature needs a simple backend with user authorization.
+- _Bug squash animation._ Animate click on the bug, for example with splash.
